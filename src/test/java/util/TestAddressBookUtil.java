@@ -40,4 +40,20 @@ public class TestAddressBookUtil {
     }
 
 
+    @Test
+    public void shouldReturnOldestContactFromAddressBook() {
+        String aDataFile = "/AddressBook";
+        AddressBook ad = dataReadService.readAddressBook(aDataFile);
+        assert (AddressBookUtil.getOldestContact(ad).get().equals(ad.getContacts().get(4)));
+    }
+    @Test
+    public void shouldReturnOldestContactFromAddressWithChangedDates() {
+        String aDataFile = "/AddressBookOldestMan";
+        AddressBook ad = dataReadService.readAddressBook(aDataFile);
+        assert (AddressBookUtil.getOldestContact(ad).get().equals( ad.getContacts().get(1)));
+    }
+
+
+
+
 }

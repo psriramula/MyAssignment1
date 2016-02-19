@@ -19,7 +19,9 @@ public class Application {
 
         AddressBook addressBook = new DataReadService().readAddressBook("/AddressBook");
         System.out.println("Read "+addressBook.getContacts().size()+" no. of records from file");
-        System.out.println("1. How many males are in the address book? ==> Ans : " + AddressBookUtil.getGenderCount(addressBook, "Male"));
+        System.out.println("1. How many males are in the address book?       ==> Ans : " + AddressBookUtil.getGenderCount(addressBook, "Male"));
+        System.out.println("2. Who is the oldest person in the address book? ==> Ans : " + AddressBookUtil.getOldestContact(addressBook).get().getName());
+
 
 
 
