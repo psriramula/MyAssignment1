@@ -46,12 +46,31 @@ public class TestAddressBookUtil {
         AddressBook ad = dataReadService.readAddressBook(aDataFile);
         assert (AddressBookUtil.getOldestContact(ad).get().equals(ad.getContacts().get(4)));
     }
+
     @Test
     public void shouldReturnOldestContactFromAddressWithChangedDates() {
         String aDataFile = "/AddressBookOldestMan";
         AddressBook ad = dataReadService.readAddressBook(aDataFile);
         assert (AddressBookUtil.getOldestContact(ad).get().equals( ad.getContacts().get(1)));
     }
+
+    @Test
+    public void shoudGetContactByNameForExistingContactName() {
+        String aDataFile = "/AddressBook";
+        AddressBook ad = dataReadService.readAddressBook(aDataFile);
+        assert (AddressBookUtil.getContactByName(ad, "Bill McKnight").isPresent());
+    }
+
+
+    @Test
+    public void sholdGetPositiveNumberForAgeDifferenceForValidDOBs() {
+        String aDataFile = "/AddressBook";
+        AddressBook ad = dataReadService.readAddressBook(aDataFile);
+        assert ( AddressBookUtil.getAgeDifferenceInDays(
+                ad, "Paul Robinson", "Bill McKnight"
+        ).get() == 2862);
+    }
+
 
 
 

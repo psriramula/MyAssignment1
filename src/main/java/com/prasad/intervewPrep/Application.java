@@ -21,9 +21,7 @@ public class Application {
         System.out.println("Read "+addressBook.getContacts().size()+" no. of records from file");
         System.out.println("1. How many males are in the address book?       ==> Ans : " + AddressBookUtil.getGenderCount(addressBook, "Male"));
         System.out.println("2. Who is the oldest person in the address book? ==> Ans : " + AddressBookUtil.getOldestContact(addressBook).get().getName());
-
-
-
+        System.out.println("3. How many days older is Bill than Paul ?       ==> Ans : " + AddressBookUtil.getAgeDifferenceInDays(addressBook, "Bill McKnight", "Paul Robinson").get());
 
 
     }
