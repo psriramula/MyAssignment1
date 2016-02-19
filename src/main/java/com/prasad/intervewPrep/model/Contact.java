@@ -21,7 +21,7 @@ public class Contact  {
     }
 
     public void setName(String aName){
-        this.name=aName;
+        this.name=aName.trim();//precaution to trim any additional space chars before after the String
     }
 
     public String getGender() {
@@ -29,7 +29,7 @@ public class Contact  {
     }
 
     public void  setGender(String aGender){
-        this.gender=aGender;
+        this.gender=aGender.trim(); //precaution to trim any additional space chars before after the String
     }
 
     public Date getDob() {

@@ -3,7 +3,7 @@
 
 ## The application
 
-This application needs to read the attached AddressBook file and answer the following questions:
+This application will read the AddressBook content file and answer the following questions:
 
 1. How many males are in the address book?
 2. Who is the oldest person in the address book?
@@ -20,6 +20,7 @@ This application needs to read the attached AddressBook file and answer the foll
 
 ## Dependency Credits
 
-1. Super CSV reading from http://www.codejava.net/coding/super-csv-reading-csv-files-into-pojos-with-csvbeanreader
+1. Used Super CSV Bean reader, for quick reading from CSV in to Java Bean, 
+More reading from http://www.codejava.net/coding/super-csv-reading-csv-files-into-pojos-with-csvbeanreader
 
 
